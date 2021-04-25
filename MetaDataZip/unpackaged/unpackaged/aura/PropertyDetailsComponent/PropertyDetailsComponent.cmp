@@ -1,0 +1,30 @@
+<aura:component controller="Property" implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" >
+
+    <aura:attribute name="propertyList" type="Property__c[]"></aura:attribute>
+
+    <aura:attribute name="propertiesFound" type="boolean" default="false"></aura:attribute>
+
+    <aura:handler name="init" value="{!this}" action="{!c.fetchAllProperty}"/>
+
+    <aura:if isTrue="{!v.propertiesFound}">
+
+        <span>Properties are listed and fetched.Deploynow</span>
+
+        <aura:set attribute="else">
+
+            <span>Properties are not listed yet as per your selection. Please stay tune to future listing.DepoloyPreviou</span>
+
+        </aura:set>
+
+    </aura:if>
+    <ul> 
+        <aura:iteration items="{!v.propertyList}" var="curr"> 
+        console.log(curr);        
+        <li> 
+                    <ui:outputText value="{!curr.Additional_Room__c}"/><br/> 
+                    <ui:outputText value="{!curr.Electricity_Status__c}"/><br/> 
+                    <ui:outputText value="{!curr.Id}"/> 
+                </li> 
+            </aura:iteration> 
+        </ul> 
+</aura:component>

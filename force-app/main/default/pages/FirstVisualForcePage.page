@@ -1,0 +1,22 @@
+<apex:page>
+<!-- controller="RegistrationClass" > -->
+    <!-- <p>Tootal Complete</p>
+<apex:form >       
+        <apex:pageMessages />
+        <table>
+            <tr>
+                <th>First Name:</th>
+                <td><apex:inputText value="{!email}"/></td>
+            </tr>
+            <tr>
+                <th>Last Name:</th>
+                <td><apex:inputText value="{!lastName}"/></td>
+            </tr>            
+            <tr>
+                <td><apex:commandButton value="Submit" action="{!register}"/></td>
+            </tr>            
+        </table>
+    </apex:form> -->
+
+    
+</apex:page>
